@@ -1,0 +1,20 @@
+{
+  "name": "leetcode-road",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Taras Khvyl",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "2.9.3",
+    "@parcel/transformer-typescript-tsc": "^2.9.3",
+    "parcel": "^2.9.3",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "highlight.js": "^11.8.0"
+  }
+}
