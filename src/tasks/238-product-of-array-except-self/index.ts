@@ -33,7 +33,27 @@ function productExceptSelf(nums: number[]): number[] {
     return response;
 }
 
+// Solution 2
+function productExceptSelf2(nums: number[]): number[] {
+    let multiple = 1;
+    let result = new Array(nums.length);
 
-console.log(productExceptSelf([1,2,3,4]));
-console.log(productExceptSelf([-1,1,0,-3,3]));
-console.log(productExceptSelf([0,4,0]));
+    for (let i = 0; i < nums.length; i ++) {
+        result[i] = multiple;
+        multiple *= nums[i];
+    }
+
+    multiple = 1;
+
+    for (let i = nums.length - 1; i >= 0; i -= 1) {
+        result[i] *= multiple;
+        multiple *= nums[i];
+    }
+
+    return result;
+}
+
+
+console.log(productExceptSelf2([1,2,3,4]));
+console.log(productExceptSelf2([-1,1,0,-3,3]));
+console.log(productExceptSelf2([0,4,0]));
